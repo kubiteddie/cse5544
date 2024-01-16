@@ -12,3 +12,9 @@ line{
     stroke:black;
     stroke-width:2;
 }
+
+path{
+    fill:transparent;
+    stroke:black;
+    stroke-width:2;
+}
