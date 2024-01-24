@@ -34,6 +34,21 @@ let data = d3.json(datalocation)
         gScatter.append("g")
                 .attr("class", "y-axis")
                 .call(d3.axisLeft(yScatter));
+
+        gScatter.append("text")
+                .attr("class", "x label")
+                .attr("text-anchor", "end")
+                .attr("x", widthScatter / 2 + 20)
+                .attr("y", heightScatter + 33)
+                .text("Time (s)");
+
+        gScatter.append("text")
+                .attr("class", "y label")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -marginScatter.left + 20)
+                .attr("x", -marginScatter.top - 150)
+                .text("Land Average Temperature (Degrees C)")
     })
     .catch(function(error) {
         console.error("Error loading JSON file:", error);
