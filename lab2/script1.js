@@ -3,7 +3,7 @@ const datalocation = 'GlobalTemperatures.json'
 let data = d3.json(datalocation)
     .then(function(data) {
         const svgScatter = d3.select('#scatterplot_1');
-        const marginScatter = { top: 20, right: 20, bottom: 40, left: 40 };
+        const marginScatter = { top: 20, right: 20, bottom: 45, left: 60 };
         const widthScatter = +svgScatter.attr("width") - marginScatter.left - marginScatter.right;
         const heightScatter = +svgScatter.attr("height") - marginScatter.top - marginScatter.bottom;
 
@@ -23,7 +23,7 @@ let data = d3.json(datalocation)
                 .enter().append("circle")
                 .attr("cx", d => xScatter(d.time))
                 .attr("cy", d => yScatter(d.LAT))
-                .attr("r", d => d.LATU) // Circle radius
+                .attr("r", d => d.LATU)
                 .attr("fill", "black");
 
         gScatter.append("g")
@@ -47,7 +47,7 @@ let data = d3.json(datalocation)
                 .attr("text-anchor", "end")
                 .attr("transform", "rotate(-90)")
                 .attr("y", -marginScatter.left + 20)
-                .attr("x", -marginScatter.top - 150)
+                .attr("x", -marginScatter.top - 90)
                 .text("Land Average Temperature (Degrees C)")
     })
     .catch(function(error) {
