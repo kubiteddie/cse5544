@@ -1,5 +1,12 @@
 const datalocation = 'GlobalTemperatures.json'
 
+function numToDate(num){
+        year = math.floor(num/10000)
+        day = num % 100
+        month = math.floor(num/100) % 100
+        return new Date(year, month-1, day)
+}
+
 let data = d3.json(datalocation)
     .then(function(data) {
         const svgScatter = d3.select('#scatterplot_1');
