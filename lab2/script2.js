@@ -23,8 +23,8 @@ let data2 = d3.json(datalocation)
             .enter().append("ellipse")
             .attr("cx", d => xScatter(d.LAT))
             .attr("cy", d => yScatter(d.LOAT))
-            .attr("rx", d => d.LATU)
-            .attr("ry", d => d.LOATU)
+            .attr("rx", d => d.LATU * 2)
+            .attr("ry", d => d.LOATU * 2)
             .attr("fill", "black");
 
         gScatter.append("g")

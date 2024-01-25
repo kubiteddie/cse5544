@@ -1,9 +1,9 @@
 const datalocation = 'GlobalTemperatures.json'
 
 function numToDate(num){
-        year = math.floor(num/10000)
+        year = Math.floor(num/10000)
         day = num % 100
-        month = math.floor(num/100) % 100
+        month = Math.floor(num/100) % 100
         return new Date(year, month-1, day)
 }
 
@@ -14,8 +14,8 @@ let data = d3.json(datalocation)
         const widthScatter = +svgScatter.attr("width") - marginScatter.left - marginScatter.right;
         const heightScatter = +svgScatter.attr("height") - marginScatter.top - marginScatter.bottom;
 
-        const xScatter = d3.scaleLinear()
-                .domain([d3.min(data, d => d.time), d3.max(data, d => d.time)])
+        const xScatter = d3.scaleTime()
+                .domain([numToDate(d3.min(data, d => d.time)), numToDate(d3.max(data, d => d.time))])
                 .range([0, widthScatter]);
 
         const yScatter = d3.scaleLinear()
@@ -28,9 +28,9 @@ let data = d3.json(datalocation)
         gScatter.selectAll("circle")
                 .data(data)
                 .enter().append("circle")
-                .attr("cx", d => xScatter(d.time))
+                .attr("cx", d => xScatter(numToDate(d.time)))
                 .attr("cy", d => yScatter(d.LAT))
-                .attr("r", d => d.LATU)
+                .attr("r", d => d.LATU * 2)
                 .attr("fill", "black");
 
         gScatter.append("g")

@@ -1,5 +1,12 @@
 const datalocation3 = 'GlobalTemperatures.json'
 
+function numToDate(num){
+    year = Math.floor(num/10000)
+    day = num % 100
+    month = Math.floor(num/100) % 100
+    return new Date(year, month-1, day)
+}
+
 let data3 = d3.json(datalocation3)
     .then(function(data3) {
         const svgScatter = d3.select('#scatterplot_3');
@@ -7,8 +14,8 @@ let data3 = d3.json(datalocation3)
         const widthScatter = +svgScatter.attr("width") - marginScatter.left - marginScatter.right;
         const heightScatter = +svgScatter.attr("height") - marginScatter.top - marginScatter.bottom;
 
-        const xScatter = d3.scaleLinear()
-                .domain([d3.min(data3, d => d.time), d3.max(data3, d => d.time)])
+        const xScatter = d3.scaleTime()
+                .domain([numToDate(d3.min(data3, d => d.time)), numToDate(d3.max(data3, d => d.time))])
                 .range([0, widthScatter]);
 
         const yScatter = d3.scaleLinear()
@@ -21,17 +28,17 @@ let data3 = d3.json(datalocation3)
         gScatter.selectAll(".latcircle")
                 .data(data3)
                 .enter().append("circle")
-                .attr("cx", d => xScatter(d.time))
+                .attr("cx", d => xScatter(numToDate(d.time)))
                 .attr("cy", d => yScatter(d.LAT))
-                .attr("r", d => d.LATU)
+                .attr("r", d => d.LATU * 2)
                 .attr("fill", "green")
                 
         gScatter.selectAll(".loatcircle")
                 .data(data3)
                 .enter().append("circle")
-                .attr("cx", d => xScatter(d.time))
+                .attr("cx", d => xScatter(numToDate(d.time)))
                 .attr("cy", d => yScatter(d.LOAT))
-                .attr("r", d => d.LOATU)
+                .attr("r", d => d.LOATU * 2)
                 .attr("fill", "blue");
 
         gScatter.append("g")
