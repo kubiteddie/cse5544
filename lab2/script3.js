@@ -12,13 +12,13 @@ let data3 = d3.json(datalocation3)
                 .range([0, widthScatter]);
 
         const yScatter = d3.scaleLinear()
-                .domain([d3.min(data3, d => d.LAT), d3.max(data3, d => d.LAT)])
+                .domain([d3.min(data3, d => d.LAT), d3.max(data3, d => d.LOAT)])
                 .range([heightScatter, 0]);
 
         const gScatter = svgScatter.append("g")
                 .attr("transform", "translate(" + marginScatter.left + "," + marginScatter.top + ")");
 
-        gScatter.selectAll("circle")
+        gScatter.selectAll(".latcircle")
                 .data(data3)
                 .enter().append("circle")
                 .attr("cx", d => xScatter(d.time))
@@ -26,7 +26,7 @@ let data3 = d3.json(datalocation3)
                 .attr("r", d => d.LATU)
                 .attr("fill", "green")
                 
-        gScatter.selectAll("circle")
+        gScatter.selectAll(".loatcircle")
                 .data(data3)
                 .enter().append("circle")
                 .attr("cx", d => xScatter(d.time))
@@ -41,6 +41,11 @@ let data3 = d3.json(datalocation3)
 
         gScatter.append("g")
                 .attr("class", "y-axis")
+                .call(d3.axisLeft(yScatter));
+
+        gScatter.append("g")
+                .attr("class", "y-axis")
+                .attr('transform', 'translate('+widthScatter+',0)')
                 .call(d3.axisLeft(yScatter));
 
         gScatter.append("text")
@@ -58,6 +63,15 @@ let data3 = d3.json(datalocation3)
                 .attr("x", -marginScatter.top - 90)
                 .text("Land Average Temperature (Degrees C)")
                 .attr("fill", "green")
+
+        gScatter.append("text")
+                .attr("class", "y label 2")
+                .attr("text-anchor", "end")
+                .attr("transform", "rotate(90)")
+                .attr("y", -marginScatter.left - 365)
+                .attr("x", widthScatter - marginScatter.right)
+                .text("Land and OceanAverage Temperature (Degrees C)")
+                .attr("fill", "blue")
                 
     })
     .catch(function(error) {
