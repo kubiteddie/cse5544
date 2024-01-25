@@ -25,12 +25,13 @@ let data3 = d3.json(datalocation3)
                 .attr("cy", d => yScatter(d.LAT))
                 .attr("r", d => d.LATU)
                 .attr("fill", "green")
-                .selectAll("circle")
+                
+        gScatter.selectAll("circle")
                 .data(data3)
                 .enter().append("circle")
                 .attr("cx", d => xScatter(d.time))
                 .attr("cy", d => yScatter(d.LOAT))
-                .attr("r", 5)
+                .attr("r", d => d.LOATU)
                 .attr("fill", "blue");
 
         gScatter.append("g")
