@@ -1,9 +1,9 @@
 const datalocation3 = 'GlobalTemperatures.json'
 
 function numToDate(num){
-    year = Math.floor(num/10000)
-    day = num % 100
-    month = Math.floor(num/100) % 100
+    let year = Math.floor(num/10000)
+    let day = num % 100
+    let month = Math.floor(num/100) % 100
     return new Date(year, month-1, day)
 }
 
