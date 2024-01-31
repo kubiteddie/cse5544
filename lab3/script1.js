@@ -19,11 +19,23 @@ fetch(datalocation)
         const widthScatter = +svgScatter.getAttribute("width") - marginScatter.left - marginScatter.right;
         const heightScatter = +svgScatter.getAttribute("height") - marginScatter.top - marginScatter.bottom;
 
-        var time = []
-        for (let i = 0; i < data.length; i++){
-            time.push(data[i].time)
+        let time = []
+        for (let item of data){
+            time.push(item.time)
         }
         
         const maxTime = Math.max(...time)
         const minTime = Math.min(...time)
+
+        console.log(maxTime)
+        
+        let LAT = []
+        for (let item of data){
+            LAT.push(item.LAT)
+        }
+
+        const maxLAT = Math.max(...LAT)
+        const minLAT = Math.min(...LAT)
+
+        console.log(maxLAT)
     })
