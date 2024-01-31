@@ -38,13 +38,30 @@ fetch(datalocation)
         for(let point of data){
             let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
             circle.setAttribute('cx', scaleTime(minTime, maxTime, widthScatter, point.time) + marginScatter.left)
-            circle.setAttribute('cy', scaleLAT(minLAT, maxLAT, heightScatter, point.LAT) + marginScatter.top)
-            circle.setAttribute('r', point.LATU)
+            circle.setAttribute('cy', heightScatter-scaleLAT(minLAT, maxLAT, heightScatter, point.LAT))
+            circle.setAttribute('r', point.LATU * 2)
             circle.setAttribute('fill', 'black')
 
             svgScatter.appendChild(circle)
         }
 
-        
+        let xAxis = document.createElementNS("http://www.w3.org/2000/svg", "line")
+        xAxis.setAttribute('x1', marginScatter.left-10)
+        xAxis.setAttribute('y1', heightScatter)
+        xAxis.setAttribute('x2', widthScatter+marginScatter.left)
+        xAxis.setAttribute('y2', heightScatter)
+        xAxis.setAttribute('stroke', 'black')
+
+        svgScatter.appendChild(xAxis)
+
+        let yAxis = document.createElementNS("http://www.w3.org/2000/svg", "line")
+        yAxis.setAttribute('x1', marginScatter.left)
+        yAxis.setAttribute('y1', heightScatter+10)
+        yAxis.setAttribute('x2', marginScatter.left)
+        yAxis.setAttribute('y2', marginScatter.top)
+        yAxis.setAttribute('stroke', 'black')
+
+        svgScatter.appendChild(yAxis)
+
 
     })
