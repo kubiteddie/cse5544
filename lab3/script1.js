@@ -12,7 +12,7 @@ function scaleTime(min, max, widthScatter, point){
 }
 
 function scaleLAT(min, max, heightScatter, point){
-    return (point-min)/(max-min)*widthScatter;
+    return (point-min)/(max-min)*heightScatter;
 }
 
 fetch(datalocation)
@@ -35,6 +35,14 @@ fetch(datalocation)
         const maxLAT = Math.max(...LAT)
         const minLAT = Math.min(...LAT)
 
-        
+        for(let point of data){
+            let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle")
+            circle.setAttribute('cx', scaleTime(minTime, maxTime, widthScatter, point.time) + marginScatter.left)
+            circle.setAttribute('cy', scaleLAT(minLAT, maxLAT, heightScatter, point.LAT) + marginScatter.top)
+            circle.setAttribute('r', point.LATU)
+            circle.setAttribute('fill', 'black')
+
+            svgScatter.appendChild(circle)
+        }
 
     })
