@@ -1,1 +1,1 @@
-const datalocation = 'GlobalTemperatures.json'
+const datalocation3 = 'GlobalTemperatures.json'
