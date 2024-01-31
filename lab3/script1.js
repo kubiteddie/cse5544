@@ -45,4 +45,6 @@ fetch(datalocation)
             svgScatter.appendChild(circle)
         }
 
+        
+
     })
