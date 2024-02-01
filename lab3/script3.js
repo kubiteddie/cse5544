@@ -80,5 +80,28 @@ fetch(datalocation3)
 
         svgScatter.appendChild(yAxis2)
 
+        let xAxisLabel = document.createElementNS("http://www.w3.org/2000/svg", "text")
+        xAxisLabel.setAttribute('x', 200)
+        xAxisLabel.setAttribute('y', heightScatter + 40)
+        xAxisLabel.innerHTML += "Time (s)"
 
+        svgScatter.appendChild(xAxisLabel)
+
+        let yAxisLabel = document.createElementNS("http://www.w3.org/2000/svg", "text")
+        yAxisLabel.setAttribute('x', 10)
+        yAxisLabel.setAttribute('y', 20)
+        yAxisLabel.setAttribute('transform', 'translate(10, 300) rotate(270)')
+        yAxisLabel.setAttribute('fill', 'green')
+        yAxisLabel.innerHTML += "LAT (Degrees C)"
+
+        svgScatter.appendChild(yAxisLabel)
+
+        let yAxisLabel2 = document.createElementNS("http://www.w3.org/2000/svg", "text")
+        yAxisLabel2.setAttribute('x', 200)
+        yAxisLabel2.setAttribute('y', 0)
+        yAxisLabel2.setAttribute('transform', 'translate(485, -10) rotate(90)')
+        yAxisLabel2.setAttribute('fill', 'blue')
+        yAxisLabel2.innerHTML += "LOAT (Degrees C)"
+
+        svgScatter.appendChild(yAxisLabel2)
     })

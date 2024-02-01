@@ -62,4 +62,19 @@ fetch(datalocation2)
 
         svgScatter.appendChild(yAxis)
 
+        let xAxisLabel = document.createElementNS("http://www.w3.org/2000/svg", "text")
+        xAxisLabel.setAttribute('x', 200)
+        xAxisLabel.setAttribute('y', heightScatter + 40)
+        xAxisLabel.innerHTML += "LAT (Degrees C)"
+
+        svgScatter.appendChild(xAxisLabel)
+
+        let yAxisLabel = document.createElementNS("http://www.w3.org/2000/svg", "text")
+        yAxisLabel.setAttribute('x', 10)
+        yAxisLabel.setAttribute('y', 20)
+        yAxisLabel.setAttribute('transform', 'translate(10, 300) rotate(270)')
+        yAxisLabel.innerHTML += "LOAT (Degrees C)"
+
+        svgScatter.appendChild(yAxisLabel)
+
     })
