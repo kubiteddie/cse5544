@@ -1,0 +1,13 @@
+h1{
+    color: black;
+}
+
+.label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.legend2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: .75em;
+}
