@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kubit Lab 8</title>
+        <script src="http://d3js.org/d3.v7.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <h1>Eddie Kubit</h1>
+        <h2>CSE 5544, Lab 8</h2>
+        <hr/>
+
+        <div id="chart" style="width: 600px; height: 600px;"></div>
+
+        <p id="county-name">County Name: </p>
+
+        <p id="covid-count">Total Covid Cases: </p>
+
+        <script>
+
+            async function dashboard(){
+                var data = await d3.json("ohiocounties.geojson")
+
+                var casesdata = await d3.json("totalcases.json")
+
+                function getCases(name){
+                    for(let i = 0; i < casesdata.length; i++){
+                        if(casesdata[i].county == name){
+                            return casesdata[i].daily_cases;
+                        }
+                    }
+                    return 0;
+                }
+
+                var width = 600, height = 600;
+
+                var svg = d3.select("#chart")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                var projection = d3.geoMercator()
+                    .scale(5000)
+                    .center([-82.98, 39.98])
+                    .translate([width/2, height/2]);
+
+                var geoGenerator = d3.geoPath()
+                    .projection(projection);
+
+                var map = svg.append("g")
+                    .selectAll("path")
+                    .data(data.features)
+                    .join("path")
+                // draw each county
+                    .attr("d", function (d) {
+                        return geoGenerator(d);
+                    })
+                    .style("stroke", "#aaa")
+                    .attr("opacity", 0.7)
+                    .attr('fill', '#a00')
+                    .on("mouseover", function(event, d){
+                        d3.select('#county-name').html("County name: " + d.properties.NAMELSAD10)
+                        d3.select('#covid-count').html("Total Covid Cases: " + getCases(d.properties.NAME10).toString())
+                    })
+            }
+
+            dashboard()
+        </script>
+    </body>
+</html>

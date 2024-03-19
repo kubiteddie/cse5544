@@ -1,0 +1,354 @@
+[
+    {
+        "county": "Adams",
+        "daily_cases": 6926.0
+    },
+    {
+        "county": "Allen",
+        "daily_cases": 27389.0
+    },
+    {
+        "county": "Ashland",
+        "daily_cases": 11938.0
+    },
+    {
+        "county": "Ashtabula",
+        "daily_cases": 19721.0
+    },
+    {
+        "county": "Athens",
+        "daily_cases": 14430.0
+    },
+    {
+        "county": "Auglaize",
+        "daily_cases": 11569.0
+    },
+    {
+        "county": "Belmont",
+        "daily_cases": 15644.0
+    },
+    {
+        "county": "Brown",
+        "daily_cases": 11172.0
+    },
+    {
+        "county": "Butler",
+        "daily_cases": 91537.0
+    },
+    {
+        "county": "Carroll",
+        "daily_cases": 5261.0
+    },
+    {
+        "county": "Champaign",
+        "daily_cases": 8701.0
+    },
+    {
+        "county": "Clark",
+        "daily_cases": 34915.0
+    },
+    {
+        "county": "Clermont",
+        "daily_cases": 51142.0
+    },
+    {
+        "county": "Clinton",
+        "daily_cases": 10294.0
+    },
+    {
+        "county": "Columbiana",
+        "daily_cases": 24325.0
+    },
+    {
+        "county": "Coshocton",
+        "daily_cases": 7941.0
+    },
+    {
+        "county": "Crawford",
+        "daily_cases": 11160.0
+    },
+    {
+        "county": "Cuyahoga",
+        "daily_cases": 267450.0
+    },
+    {
+        "county": "Darke",
+        "daily_cases": 12353.0
+    },
+    {
+        "county": "Defiance",
+        "daily_cases": 10188.0
+    },
+    {
+        "county": "Delaware",
+        "daily_cases": 44024.0
+    },
+    {
+        "county": "Erie",
+        "daily_cases": 19378.0
+    },
+    {
+        "county": "Fairfield",
+        "daily_cases": 38339.0
+    },
+    {
+        "county": "Fayette",
+        "daily_cases": 7774.0
+    },
+    {
+        "county": "Franklin",
+        "daily_cases": 287446.0
+    },
+    {
+        "county": "Fulton",
+        "daily_cases": 10314.0
+    },
+    {
+        "county": "Gallia",
+        "daily_cases": 7472.0
+    },
+    {
+        "county": "Geauga",
+        "daily_cases": 15973.0
+    },
+    {
+        "county": "Greene",
+        "daily_cases": 37422.0
+    },
+    {
+        "county": "Guernsey",
+        "daily_cases": 10436.0
+    },
+    {
+        "county": "Hamilton",
+        "daily_cases": 186696.0
+    },
+    {
+        "county": "Hancock",
+        "daily_cases": 17081.0
+    },
+    {
+        "county": "Hardin",
+        "daily_cases": 7061.0
+    },
+    {
+        "county": "Harrison",
+        "daily_cases": 3221.0
+    },
+    {
+        "county": "Henry",
+        "daily_cases": 6427.0
+    },
+    {
+        "county": "Highland",
+        "daily_cases": 10611.0
+    },
+    {
+        "county": "Hocking",
+        "daily_cases": 6613.0
+    },
+    {
+        "county": "Holmes",
+        "daily_cases": 5104.0
+    },
+    {
+        "county": "Huron",
+        "daily_cases": 14453.0
+    },
+    {
+        "county": "Jackson",
+        "daily_cases": 8882.0
+    },
+    {
+        "county": "Jefferson",
+        "daily_cases": 14657.0
+    },
+    {
+        "county": "Knox",
+        "daily_cases": 13113.0
+    },
+    {
+        "county": "Lake",
+        "daily_cases": 48723.0
+    },
+    {
+        "county": "Lawrence",
+        "daily_cases": 17796.0
+    },
+    {
+        "county": "Licking",
+        "daily_cases": 41518.0
+    },
+    {
+        "county": "Logan",
+        "daily_cases": 10203.0
+    },
+    {
+        "county": "Lorain",
+        "daily_cases": 66318.0
+    },
+    {
+        "county": "Lucas",
+        "daily_cases": 99438.0
+    },
+    {
+        "county": "Madison",
+        "daily_cases": 9644.0
+    },
+    {
+        "county": "Mahoning",
+        "daily_cases": 53222.0
+    },
+    {
+        "county": "Marion",
+        "daily_cases": 19811.0
+    },
+    {
+        "county": "Medina",
+        "daily_cases": 39908.0
+    },
+    {
+        "county": "Meigs",
+        "daily_cases": 4596.0
+    },
+    {
+        "county": "Mercer",
+        "daily_cases": 9676.0
+    },
+    {
+        "county": "Miami",
+        "daily_cases": 25674.0
+    },
+    {
+        "county": "Monroe",
+        "daily_cases": 3463.0
+    },
+    {
+        "county": "Montgomery",
+        "daily_cases": 126462.0
+    },
+    {
+        "county": "Morgan",
+        "daily_cases": 3277.0
+    },
+    {
+        "county": "Morrow",
+        "daily_cases": 7736.0
+    },
+    {
+        "county": "Muskingum",
+        "daily_cases": 25232.0
+    },
+    {
+        "county": "Noble",
+        "daily_cases": 3214.0
+    },
+    {
+        "county": "Ottawa",
+        "daily_cases": 8454.0
+    },
+    {
+        "county": "Paulding",
+        "daily_cases": 4609.0
+    },
+    {
+        "county": "Perry",
+        "daily_cases": 8268.0
+    },
+    {
+        "county": "Pickaway",
+        "daily_cases": 17472.0
+    },
+    {
+        "county": "Pike",
+        "daily_cases": 7444.0
+    },
+    {
+        "county": "Portage",
+        "daily_cases": 34027.0
+    },
+    {
+        "county": "Preble",
+        "daily_cases": 9441.0
+    },
+    {
+        "county": "Putnam",
+        "daily_cases": 8440.0
+    },
+    {
+        "county": "Richland",
+        "daily_cases": 31444.0
+    },
+    {
+        "county": "Ross",
+        "daily_cases": 19197.0
+    },
+    {
+        "county": "Sandusky",
+        "daily_cases": 13913.0
+    },
+    {
+        "county": "Scioto",
+        "daily_cases": 20565.0
+    },
+    {
+        "county": "Seneca",
+        "daily_cases": 12731.0
+    },
+    {
+        "county": "Shelby",
+        "daily_cases": 11044.0
+    },
+    {
+        "county": "Stark",
+        "daily_cases": 79567.0
+    },
+    {
+        "county": "Summit",
+        "daily_cases": 111887.0
+    },
+    {
+        "county": "Trumbull",
+        "daily_cases": 41377.0
+    },
+    {
+        "county": "Tuscarawas",
+        "daily_cases": 20551.0
+    },
+    {
+        "county": "Union",
+        "daily_cases": 15562.0
+    },
+    {
+        "county": "Van Wert",
+        "daily_cases": 6720.0
+    },
+    {
+        "county": "Vinton",
+        "daily_cases": 2912.0
+    },
+    {
+        "county": "Warren",
+        "daily_cases": 57495.0
+    },
+    {
+        "county": "Washington",
+        "daily_cases": 12336.0
+    },
+    {
+        "county": "Wayne",
+        "daily_cases": 23071.0
+    },
+    {
+        "county": "Williams",
+        "daily_cases": 9075.0
+    },
+    {
+        "county": "Wood",
+        "daily_cases": 31357.0
+    },
+    {
+        "county": "Wyandot",
+        "daily_cases": 5409.0
+    }
+]
